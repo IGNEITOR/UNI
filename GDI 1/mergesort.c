@@ -97,5 +97,5 @@ void Testmultiple_mergesort(){
 int main(void){
     srand(time(NULL));
     
-    TestMerge_sort(50000);
+    Testmultiple_mergesort();
 }
