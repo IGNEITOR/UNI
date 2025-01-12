@@ -83,12 +83,11 @@ void test_selectionsort(int size){
 
 }
 
-void testmultiple_selectionsort(){
-    int wert = 5000;
-    for(int x = 0; x < 10; x++){
-        printf("Feldgröße: %d\n",wert);
+void testmultiple_selectionsort(int wert, int wiederholungen){
+    int inc = wert / 10;
+    for(int x = 0; x < wiederholungen; x++){
         test_selectionsort(wert);
-        wert = wert +5000;
+        wert = wert +inc;
        
     }
 }
@@ -97,7 +96,7 @@ void testmultiple_selectionsort(){
 
 int main(void){
     srand(time(NULL));
-   testmultiple_selectionsort();
+   testmultiple_selectionsort(50000,10);
 
     return 0;
 }

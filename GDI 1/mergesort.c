@@ -84,24 +84,24 @@ void TestMerge_sort(int size) {
         p_numbers[i]=(((rand()&0x7FFF)<<15)+(rand()&0x7FFF));
     }
 
-    printf("Sortiere ein Array der Größe %d...\n", size);
+    
     Mergesort_time(p_numbers, size);
 
     free(p_numbers);
 }
 
 // Mehrere Tests mit unterschiedlichen Array-Größen
-void Testmultiple_mergesort() {
-    int feldgroesse = 50000;
-    for (int x = 0; x < 10; x++) {
+void Testmultiple_mergesort(int feldgroesse, int wiederholungen) {
+    int inc = feldgroesse/10;
+    for (int x = 0; x < wiederholungen; x++) {
         TestMerge_sort(feldgroesse);
-        feldgroesse = feldgroesse *2;
+        feldgroesse = feldgroesse + inc ;
     }
 }
 
 int main(void) {
     srand((unsigned int)time(NULL));  
 
-    Testmultiple_mergesort();
+    Testmultiple_mergesort(5000000,10);
     return 0;
 }
