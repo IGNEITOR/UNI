@@ -26,6 +26,7 @@ int Stack::push(int datum) {
         return -1;
     } else if (next >= capacity) {
         cout << "Fehler: Stack ist voll!" << endl;
+        return -1;
     } else {
         value[next] = datum; // Wert speichern
         next++; // Index erhöhen

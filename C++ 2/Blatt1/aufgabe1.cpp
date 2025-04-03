@@ -89,7 +89,7 @@ void test_stack() {
         cout << "Testfall 9 erfolgreich" << endl;
     }
 
-    // Testfall 10: Peek ohne Modifikation
+    // Testfall 10: Peek 
     Stack test10;
     test10.push(99);
     int peekWert = test10.peek();
