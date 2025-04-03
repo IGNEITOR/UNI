@@ -1,5 +1,5 @@
-#ifndef VORGABE_H
-#define VORGABE_H
+#ifndef VORGABE_HPP
+#define VORGABE_HPP
 
 const int N_MAX_STACK = 1000; // maximale Stapelgröße
 class Stack {
@@ -15,9 +15,9 @@ class Stack {
         bool is_not_empty(); // Stapel nicht leer
     private:
         void init(); // Initialisierung
-        int *value[N_MAX_STACK]; // Feld zur Aufnahme der Datenelemente
+        int *value; // Feld zur Aufnahme der Datenelemente
         int next; // Stapelzeiger
         int capacity; // maximale Elementzahl
- };
+};
 
 #endif
