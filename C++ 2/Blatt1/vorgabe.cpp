@@ -20,14 +20,16 @@ void Stack::init() { // INITIALISIERUNG
     }
 }
 
-void Stack::push(int datum) {
+int Stack::push(int datum) {
     if (datum < 0) {
         cout << "Fehler: negative Zahlen koennen nicht gespeichert werden!" << endl;
+        return -1;
     } else if (next >= capacity) {
         cout << "Fehler: Stack ist voll!" << endl;
     } else {
         value[next] = datum; // Wert speichern
         next++; // Index erhöhen
+        return 0;
     }
 }
 

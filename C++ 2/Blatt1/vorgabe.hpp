@@ -6,7 +6,7 @@ class Stack {
     public:
         Stack(); // Konstruktor
         ~Stack();
-        void push(int datum); // Element hinzufügen
+        int push(int datum); // Element hinzufügen
         int pop(); // Element entfernen
         int peek(); // Wert des obersten Elementes
         int size(); // Anzahl der Elemente
