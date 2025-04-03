@@ -44,7 +44,7 @@ int Stack::pop() {
 int Stack::peek() {
     if (next <= 0) {
         cout << "Fehler: Stack ist leer!" << endl;
-        return -1;
+        return -1; 
     } else {
         return value[next-1];
     }
@@ -53,7 +53,7 @@ int Stack::peek() {
 int Stack::size() {
     if (next <= 0) {
         cout << "Fehler: Stack ist leer!" << endl;
-        return -1;
+        return -1;  
     } else {
         return next;
     }

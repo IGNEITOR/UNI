@@ -1,7 +1,7 @@
 #ifndef VORGABE_HPP
 #define VORGABE_HPP
 
-const int N_MAX_STACK = 1000; // maximale Stapelgröße
+const int N_MAX_STACK = 1000; 
 class Stack {
     public:
         Stack(); // Konstruktor
