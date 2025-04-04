@@ -1,3 +1,9 @@
+/*
+Author: Lennart Janson
+Aufabe: Blatt1 Stack implementieren
+Sprache: c++
+*/
+
 #include "vorgabe.hpp"
 #include <iostream>
 
@@ -9,7 +15,7 @@ void test_stack() {
     // Testfall 1: Negativen Wert pushen
     Stack test1;
     test1.push(-10);
-    if(test1.size() != -1) {
+    if(test1.size() != 0) {
         cout << "FEHLER in Testfall 1" << endl;
     } else {
         cout << "Testfall 1 erfolgreich" << endl;
@@ -47,7 +53,7 @@ void test_stack() {
 
     // Testfall 5: Größenabfrage leerer Stack
     Stack test5;
-    if(test5.size() != -1) {
+    if(test5.size() != 0) {
         cout << "FEHLER in Testfall 5" << endl;
     } else {
         cout << "Testfall 5 erfolgreich" << endl;

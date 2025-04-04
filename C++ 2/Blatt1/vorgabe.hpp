@@ -1,3 +1,8 @@
+/*
+Author: Lennart Janson
+Aufabe: Blatt1 Stack implementieren
+Sprache: c++
+*/
 #ifndef VORGABE_HPP
 #define VORGABE_HPP
 
@@ -5,7 +10,7 @@ const int N_MAX_STACK = 1000;
 class Stack {
     public:
         Stack(); // Konstruktor
-        ~Stack();
+        ~Stack();// Dekonstruktor
         int push(int datum); // Element hinzufügen
         int pop(); // Element entfernen
         int peek(); // Wert des obersten Elementes

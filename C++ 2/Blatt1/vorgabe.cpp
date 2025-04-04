@@ -1,17 +1,25 @@
+/*
+Author: Lennart Janson
+Aufabe: Blatt1 Stack implementieren
+Sprache: c++
+*/
+
 #include "vorgabe.hpp"
 #include <iostream>
 
 using namespace std;
 
+//Konstruktor
 Stack::Stack() {
     capacity = N_MAX_STACK;
     value = nullptr;
     init();
 }
-
+// Dekonstruktor
 Stack::~Stack() {
     delete[] value;
 }
+
 
 void Stack::init() { // INITIALISIERUNG
     next = 0; // Index zurücksetzen
@@ -20,6 +28,7 @@ void Stack::init() { // INITIALISIERUNG
     }
 }
 
+// Legt wert >0 auf den stack
 int Stack::push(int datum) {
     if (datum < 0) {
         cout << "Fehler: negative Zahlen koennen nicht gespeichert werden!" << endl;
@@ -34,6 +43,7 @@ int Stack::push(int datum) {
     }
 }
 
+// Nimmt den obersten wert vom Stack
 int Stack::pop() {
     if (next <= 0) {
         cout << "Fehler: Stack ist leer!" << endl;
@@ -54,8 +64,8 @@ int Stack::peek() {
 }
 
 int Stack::size() {
-    if (next <= 0) {
-        cout << "Fehler: Stack ist leer!" << endl;
+    if (next < 0) {
+        cout << "Fehler: Stack ist Negativ!" << endl;
         return -1;  
     } else {
         return next;
@@ -72,19 +82,9 @@ int Stack::get_capacity() {
 }
 
 bool Stack::is_empty() {
-    if (next < 0) {
-        cout << "Fehler: Stack ist leer!" << endl;
-        return -1;
-    } else if (next == 0) {
-        return true;
-    } else return false;
+    return (next == 0);
 }
 
 bool Stack::is_not_empty() {
-    if (next < 0) {
-        cout << "Fehler: Stack ist leer!" << endl;
-        return -1;
-    } else if (next > 0) {
-        return true;
-    } else return false;
+    return (next > 0);
 }
